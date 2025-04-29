@@ -2,6 +2,7 @@
 
 import { Mail, Phone, MapPin } from "lucide-react";
 import Head from "next/head";
+import Navbar from "~/components/Navbar";
 
 export default function ContactPage() {
   return (
@@ -10,7 +11,7 @@ export default function ContactPage() {
         <title>Contact Us - MapOfWonders</title>
         <meta name="description" content="Contact MapOfWonders for inquiries about our travel packages" />
       </Head>
-
+      <Navbar />
       <div className="container mx-auto px-4 py-16">
         <h1 className="mb-12 text-center text-4xl font-bold">Contact Us</h1>
         

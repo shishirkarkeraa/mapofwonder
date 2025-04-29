@@ -113,7 +113,7 @@ export default function Home() {
       >
         <div className="container flex flex-col items-center px-4 py-8">
           <h1 className="mb-8 text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-            <span className="text-[hsl(280,100%,70%)]">Seven</span> Wonders of the World
+            <span className="text-[hsl(280,100%,70%)]">Seven Wonders of the World</span>
           </h1>
           
           <div className="w-full max-w-5xl">
