@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import Navbar from "~/components/Navbar";
+import Link from "next/link";
 
 // Define the interface for the Wonders
 interface Wonder {
@@ -102,12 +103,12 @@ export default function Home() {
   }, []);
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-b from-[#0f1235] to-[#0a0c28]">
       <div ref={navbarRef} className="fixed top-0 left-0 right-0 z-50">
         <Navbar />
       </div>
       <main 
-        className="flex min-h-screen mt-15 flex-col items-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white" 
+        className="flex min-h-screen mt-15 flex-col items-center" 
         style={{ paddingTop: `${navbarHeight}px` }}
       >
         <div className="container flex flex-col items-center px-4 py-8">
@@ -150,6 +151,32 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </>
+
+      {/* Call to Action Section */}
+      <div className="bg-gradient-to-r from-purple-900 to-indigo-800 py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="mb-4 text-3xl font-bold text-white">
+            Ready to Explore the Wonders of the World?
+          </h2>
+          <p className="mb-8 text-lg text-white/80">
+            Start planning your next adventure today
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link 
+              href="/packages" 
+              className="rounded-full bg-white px-8 py-3 font-bold text-purple-900 transition-colors hover:bg-gray-100"
+            >
+              Browse Packages
+            </Link>
+            <Link 
+              href="/contact" 
+              className="rounded-full border-2 border-white px-8 py-3 font-bold text-white transition-colors hover:bg-white/10"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

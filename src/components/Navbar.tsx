@@ -7,9 +7,10 @@ import { useState } from "react";
 export default function Navbar() {
   const { data: session } = useSession();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <nav className="bg-[#2e026d]/90 backdrop-blur-sm fixed w-full z-50" data-testid="navbar">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+    <nav className="sticky top-0 z-50 bg-gradient-to-r from-[#0f1235] to-[#0a0c28] shadow-lg">
+      <div className="mx-auto flex max-w-7xl items-center justify-between p-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-[hsl(280,100%,70%)] rounded-full flex items-center justify-center">
@@ -19,13 +20,17 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="text-white hover:text-[hsl(280,100%,70%)] transition">
+        <div className="hidden md:flex md:items-center md:gap-6">
+          <Link href="/" className="text-white hover:text-[hsl(280,100%,70%)]">
             Home
           </Link>
-          <Link href="/packages" className="text-white hover:text-[hsl(280,100%,70%)] transition">
+          <Link href="/packages" className="text-white hover:text-[hsl(280,100%,70%)]">
             Packages
           </Link>
+          <Link href="/contact" className="text-white hover:text-[hsl(280,100%,70%)]">
+            Contact Us
+          </Link>
+          
           <Link
               href={session ? "/api/auth/signout" : "/api/auth/signin"}
               className="bg-[hsl(280,100%,70%)] text-white rounded-full px-6 py-2 font-semibold no-underline transition hover:bg-[hsl(280,100%,80%)] hover:shadow-md"
@@ -51,28 +56,38 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#2e026d] pb-4 px-4">
-          <Link 
-            href="/" 
-            className="block py-2 text-white hover:text-[hsl(280,100%,70%)]"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Home
-          </Link>
-          <Link 
-            href="/packages" 
-            className="block py-2 text-white hover:text-[hsl(280,100%,70%)]"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Packages
-          </Link>
-          <Link
-            href={session ? "/api/auth/signout" : "/api/auth/signin"}
-            className="block mt-2 bg-[hsl(280,100%,70%)] text-white text-center rounded-full px-6 py-2 font-semibold no-underline transition hover:bg-[hsl(280,100%,80%)]"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            {session ? "Sign out" : "Sign in"}
-          </Link>
+        <div className="absolute left-0 right-0 top-full bg-[#0f1235] p-4 shadow-lg md:hidden">
+          <div className="flex flex-col space-y-4">
+            <Link
+              href="/"
+              className="text-white hover:text-[hsl(280,100%,70%)]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              href="/packages"
+              className="text-white hover:text-[hsl(280,100%,70%)]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Packages
+            </Link>
+            <Link
+              href="/contact"
+              className="text-white hover:text-[hsl(280,100%,70%)]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact Us
+            </Link>
+            
+            <Link
+              href={session ? "/api/auth/signout" : "/api/auth/signin"}
+              className="block mt-2 bg-[hsl(280,100%,70%)] text-white text-center rounded-full px-6 py-2 font-semibold no-underline transition hover:bg-[hsl(280,100%,80%)]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {session ? "Sign out" : "Sign in"}
+            </Link>
+          </div>
         </div>
       )}
     </nav>
