@@ -22,7 +22,7 @@ export default function PackagesPage() {
         </h1>
 
         <div className="w-full max-w-7xl">
-          {/* Filter controls */}
+
           <div className="mb-8 flex flex-wrap items-center gap-2 rounded-lg bg-white/10 p-4">
             <div className="flex items-center gap-2">
               <Filter size={20} />
@@ -55,7 +55,6 @@ export default function PackagesPage() {
             )}
           </div>
 
-          {/* Package cards grid */}
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {filteredPackages.map((pkg) => (
               <div

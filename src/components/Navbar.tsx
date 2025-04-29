@@ -11,7 +11,6 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-gradient-to-r from-[#0f1235] to-[#0a0c28] shadow-lg">
       <div className="mx-auto flex max-w-7xl items-center justify-between p-4">
-        {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-[hsl(280,100%,70%)] rounded-full flex items-center justify-center">
             <span className="text-white font-bold text-xl">M</span>
@@ -19,7 +18,7 @@ export default function Navbar() {
           <span className="text-white text-xl font-bold">MapOfWonders</span>
         </Link>
 
-        {/* Desktop Navigation */}
+
         <div className="hidden md:flex md:items-center md:gap-6">
           <Link href="/" className="text-white hover:text-[hsl(280,100%,70%)]">
             Home
@@ -39,7 +38,6 @@ export default function Navbar() {
             </Link>
         </div>
 
-        {/* Mobile menu button */}
         <button 
           className="md:hidden text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -54,7 +52,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="absolute left-0 right-0 top-full bg-[#0f1235] p-4 shadow-lg md:hidden">
           <div className="flex flex-col space-y-4">

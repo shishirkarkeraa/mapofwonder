@@ -124,7 +124,6 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Map Container */}
             <div className="h-[70vh] w-full overflow-hidden rounded-lg relative z-10">
               <MapWithNoSSR 
                 wonders={wonders} 
@@ -132,7 +131,7 @@ export default function Home() {
               />
             </div>
 
-            {/* Info Panel */}
+
             <div className="mt-6 min-h-[150px] rounded-lg bg-white/10 p-4">
               {activeWonder !== null ? (
                 <div>
@@ -152,7 +151,6 @@ export default function Home() {
         </div>
       </main>
 
-      {/* Call to Action Section */}
       <div className="bg-gradient-to-r from-purple-900 to-indigo-800 py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="mb-4 text-3xl font-bold text-white">
