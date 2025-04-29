@@ -20,7 +20,7 @@ export const tourPackages: TourPackage[] = [
     ],
     description:
       "Experience the majesty of the Great Wall of China on this comprehensive 7-day tour. Explore the best-preserved Mutianyu section with breathtaking mountain views. The package includes visits to Beijing's top attractions including the Forbidden City and Temple of Heaven, plus authentic cultural experiences.",
-    imageUrl: "https://images.unsplash.com/photo-1508804052814-cd3ba865a116?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRF77atX9awWUQ8SvdzRabTb6WGxPdNAX39A&s",
     ratings: 4.8,
     reviewCount: 543,
     featured: true,
@@ -52,7 +52,7 @@ export const tourPackages: TourPackage[] = [
     ],
     description:
       "Discover the ancient rose-red city of Petra and explore Jordan's highlights on this 8-day adventure. Spend two full days exploring the vast archaeological site of Petra, including the famous Treasury and Monastery. Experience the unique landscape of Wadi Rum with a desert camp overnight and float in the mineral-rich Dead Sea.",
-    imageUrl: "https://images.unsplash.com/photo-1579606036407-08fa3868609d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
+    imageUrl: "https://images.unsplash.com/photo-1563177978-4c518ed4f8a9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
     ratings: 4.9,
     reviewCount: 412,
     featured: true,

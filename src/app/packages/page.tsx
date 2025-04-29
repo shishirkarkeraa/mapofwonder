@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { tourPackages } from "~/data/packages";
 import Navbar from "~/components/Navbar";
 import { Star, MapPin, Clock, Check, Filter } from "lucide-react";
@@ -70,12 +71,14 @@ export default function PackagesPage() {
                       Featured
                     </div>
                   )}
-                  <div className="h-full w-full bg-gray-300">
-                    {/* This would use real images in production */}
-                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-r from-purple-900 to-indigo-800 text-center font-bold">
-                      {pkg.wonderName}
-                    </div>
-                  </div>
+                  <Image
+                    src={pkg.imageUrl}
+                    alt={`${pkg.wonderName} tour`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                    priority={pkg.featured}
+                  />
                 </div>
 
                 <div className="flex flex-1 flex-col p-4">
@@ -141,6 +144,7 @@ export default function PackagesPage() {
                 </div>
               </div>
             ))}
+
           </div>
 
           {filteredPackages.length === 0 && (
