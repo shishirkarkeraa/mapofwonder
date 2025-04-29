@@ -52,7 +52,7 @@ export const tourPackages: TourPackage[] = [
     ],
     description:
       "Discover the ancient rose-red city of Petra and explore Jordan's highlights on this 8-day adventure. Spend two full days exploring the vast archaeological site of Petra, including the famous Treasury and Monastery. Experience the unique landscape of Wadi Rum with a desert camp overnight and float in the mineral-rich Dead Sea.",
-    imageUrl: "https://images.unsplash.com/photo-1563177978-4c518ed4f8a9?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200",
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf4HwhngZm_iv5mfLe1P48pK8J-vxd4EAZRg&s",
     ratings: 4.9,
     reviewCount: 412,
     featured: true,
